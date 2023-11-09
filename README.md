@@ -269,5 +269,5 @@
 
 ## Обратная связь
 
-Если у вас есть вопросы обращайтесь на почту [detection_tropical_cyclone@mail.ru](mailto:detection_tropical_cyclone@mail.ru)
+Если у Вас есть вопросы обращайтесь на почту [detection_tropical_cyclone@mail.ru](mailto:detection_tropical_cyclone@mail.ru)
 
