@@ -226,9 +226,9 @@
 
 Актуальный результат тестовой модели:
 #### *Входное изображение:*
-![20230609050000_ir_png.rf.bf6d84593624a24e1ee739ac114cb527.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/20230609050000_ir_png.rf.bf6d84593624a24e1ee739ac114cb527.jpg?raw=true)
+![20230609050000_ir_png.rf.bf6d84593624a24e1ee739ac114cb527.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_1.jpg)
 #### *Изображение на выходе:*
-![results.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/results.jpg?raw=true)
+![results.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_1.jpg)
 
 > *На данный момент наша модель может обнаруживать тропический циклон и его центр.*
 
