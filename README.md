@@ -1,5 +1,6 @@
 
 
+
 # **Детекция тропических циклонов**
 
 ### Содержание:
@@ -25,8 +26,9 @@
 - [Сравнительный анализ датасетов](#сравнительный-анализ-датасетов)
 
 - [Нейронная сеть:](#нейронная-сеть)
-	-	[Обучение нейронной сети](#обучение-нейронной-сети)  
-	-	[Пример использования](#пример-использования)
+	-	[Обучение нейронной сети для детекции](#обучение-нейронной-сети-для-детекции)
+	-	[Обучение нейронной сети для сегментации](#обучение-нейронной-сети-для-сегментации)  
+	-	[Пример использования](#пример-использования) 
 - [Телеграмм бот](#телеграмм-бот)
 
 
@@ -220,46 +222,77 @@
 
 # Нейронная сеть
 
-### Обучение нейронной сети:
+### Обучение нейронной сети для детекции:
 ---
 Мы провели предварительное обучение модели `YOLOv8` на [наборе данных](https://universe.roboflow.com/hanwen-zhang-poufi/typhoon-6pqhj/dataset/2), который включает в себя обнаружение тропического циклона и его центра.
 
 Актуальный результат тестовой модели:
+<br></br>
 #### *Входное изображение:*
-![20230609050000_ir_png.rf.bf6d84593624a24e1ee739ac114cb527.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_1.jpg)
+<br></br>
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_1.jpg)
+<br></br>
 #### *Изображение на выходе:*
-![results.jpg](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_1.jpg)
-
+<br></br>
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_1.jpg)
+<br></br>
 > *На данный момент наша модель может обнаруживать тропический циклон и его центр.*
 
-Мы активно **работаем** над улучшением точности нашей модели, одна их наших задач сегодня - это *ручная* разметка датасета для сегментации циклонов на [Roboflow](https://app.roboflow.com/).
-
+Мы активно **работаем** над улучшением точности нашей модели, одна их наших задач сегодня - это *ручная* разметка датасета для сегментации циклонов на [Roboflow](https://roboflow.com/).
+<br></br>
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/9fc7a5cd-ca79-4f3a-b4de-70220a2fd12e)
+<br></br>
+### Обучение нейронной сети для сегментации:
+---
+Так же нами было проведено предварительное обучение на [датасете](https://universe.roboflow.com/sassuke-uchicha-6mbbd/cyclone-ieg77) сделанном нами и опубликованном на [Roboflow](https://roboflow.com/).
+
+Мы активно работаем над улучшением качества датасета, а также количеством данных в нём.
+
+Актуальный результат тестовой модели:
+<br></br>
+#### *Входное изображение:*
+<br></br>
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_2.jpg)
+<br></br>
+#### *Изображение на выходе:*
+<br></br>
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_2.jpg)
+<br></br>
 
 ### Пример использования:
 ---
 1. Установите библиотеки:
-```bash
-  pip install ultralytics
-  pip install Pillow
-  pip install numpy
-```
-2. Откройте файл:
-```bash
-  main.py
-```
+	```bash
+	  pip install ultralytics
+	  pip install Pillow
+	  pip install numpy
+	```
+2. Откройте файл 
 
-В строке `results = model("")` в кавычках напишите путь к вашему изображению
+	для детекции:
+   ```bash
+	  detect.py
+	```
+
+	для сегментации:
+
+	```bash
+	  segment.py
+	```
+
+
+> В строке `results = model("")` в кавычках напишите путь к вашему изображению
+
 
 3. Запустите  файл:
-```bash
-  main.py
-```
+	```bash
+	  main.py
+	```
 
 4. Результат с предсказанием сохранится с именем:
-```bash
-  result.jpg
-```
+	```bash
+	  result.jpg
+	```
 
 ## Телеграмм бот 
 
@@ -270,4 +303,3 @@
 ## Обратная связь
 
 Если у Вас есть вопросы обращайтесь на почту [project@dtcyclone.ru](mailto:project@dtcyclone.ru)
-
