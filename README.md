@@ -267,6 +267,8 @@
 
 ### Пример использования:
 ---
+<details><summary>Первый этап</summary>
+
 1. Установите библиотеки:
 	```bash
 	  pip install ultralytics
@@ -277,7 +279,7 @@
 
 	для детекции:
    ```bash
-	  detect.py
+	detect.py
 	```
 
 	для сегментации:
@@ -296,6 +298,14 @@
 	```bash
 	  result.jpg
 	```
+
+</details>
+
+<details><summary>Второй этап(доп. задание)</summary>
+
+</details>
+
+
 
 ## Телеграмм бот 
 
