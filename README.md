@@ -232,11 +232,11 @@
 <br></br>
 #### *Входное изображение:*
 <br></br>
-![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_1.jpg)
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/first_stage/img/input_1.jpg)
 <br></br>
 #### *Изображение на выходе:*
 <br></br>
-![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_1.jpg)
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/first_stage/img/output_1.jpg)
 <br></br>
 > *На данный момент наша модель может обнаруживать тропический циклон и его центр.*
 
@@ -254,11 +254,11 @@
 <br></br>
 #### *Входное изображение:*
 <br></br>
-![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/input_2.jpg)
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/first_stage/img/input_2.jpg)
 <br></br>
 #### *Изображение на выходе:*
 <br></br>
-![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/img/output_2.jpg)
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/first_stage/img/output_2.jpg)
 <br></br>
 
 ### Пример использования:
