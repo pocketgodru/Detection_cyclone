@@ -1,12 +1,11 @@
 from ultralytics import YOLO
 from PIL import Image
-# Load a model
-model = YOLO('model/best_detect.onnx', task='detect')  # загрузка обученной модели для детекции
 
-results = model('img/input_1.jpg') # ваше изображение
-# Show the results
+model = YOLO('model/best_detect.onnx', task='detect')  # Загрузка обученной модели для детекции
+
+results = model('img/input_1.jpg') # Обработка входного изображение
 for r in results:
-    im_array = r.plot()  # plot a BGR numpy array of predictions
-    im = Image.fromarray(im_array[..., ::-1])  # RGB PIL image
-    im.show()  # показ изображения
-    #im.save('results.jpg')  # сохранение изображения
+    im_array = r.plot()
+    im = Image.fromarray(im_array[..., ::-1])
+    im.show()  # Вывод выходного изображения
+    im.save('results.jpg')  # Сохранение выходного изображения
