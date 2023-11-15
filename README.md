@@ -4,7 +4,7 @@
 
 # **Детекция тропических циклонов**
 
-C выполненым заданием второго этапа можете ознакомится по этой [ссылки.](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage)
+C выполненым заданием второго этапа можете ознакомится по этой [ссылке.](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage)
 
 ## Содержание:
 
