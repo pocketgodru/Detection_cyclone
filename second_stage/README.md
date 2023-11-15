@@ -19,24 +19,17 @@
 
 Обучение нейронной сети проводилось на предоставленном [датасете](https://github.com/academy21/TC-Satellite-DataSet/tree/main).
 Из-за неподходящего формата датасета, нами был написан скрипт для форматирования его в *формат*, подходящий `YOLO`. Данный [скрипт](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/utils/convert_to_yolo.py) вы можете просмотреть в `second_stage/utils/convert_to_yolo.py` .
-
 *Изображение с требованиями по формату файла для модели `YOLO` c [официального сайта](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format)*
 ![enter image description here](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/04f6d935-94aa-45a7-8b41-21fa6459787c)
-
 Следовательно, нам нужно было преобразовать все файлы в вышепоказанный формат для корректного обучения модели.
-
 *Изначальный формат:*
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/1fc8aa51-63f4-4ccf-8f1e-922cca0037b1)
-
 *Формат после обработки нашим скриптом:*
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/9a9a8311-f728-4331-918a-5fa4e755725f)
-
 После этого нами была успешно обучена модель на **15 эпохах** с настройками, [представленными](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/train/args.yaml) в `second_stage/train/args.yaml`.
-
 
 ## Использование обученной модели
 Обученная модель имеет название `best.onnx`.
-
 Скрипт для использования модели предоставлен в `solution.py`.
 ```bash
 python solution.py путь_к_папке_с_изображениями 
