@@ -21,7 +21,7 @@
 Из-за неподходящего формата датасета, нами был написан скрипт для форматирования его в *формат*, подходящий `YOLO`. Данный [скрипт](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/utils/convert_to_yolo.py) вы можете просмотреть в `second_stage/utils/convert_to_yolo.py`.
 
 *Изображение с требованиями по формату файла для модели `YOLO` c [официального сайта](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format)*
-![enter image description here](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/04f6d935-94aa-45a7-8b41-21fa6459787c)
+![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/af40e879-52db-48a0-b949-39c9a4e77f63)
 
 Следовательно, нам нужно было преобразовать все файлы в вышепоказанный формат для корректного обучения модели.
 *Изначальный формат:*
