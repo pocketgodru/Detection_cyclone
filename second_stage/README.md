@@ -21,13 +21,20 @@
 Из-за неподходящего формата датасета, нами был написан скрипт для форматирования его в *формат*, подходящий `YOLO`. Данный [скрипт](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/utils/convert_to_yolo.py) вы можете просмотреть в `second_stage/utils/convert_to_yolo.py`.
 
 *Изображение с требованиями по формату файла для модели `YOLO` c [официального сайта](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format)*
+
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/af40e879-52db-48a0-b949-39c9a4e77f63)
 
 Следовательно, нам нужно было преобразовать все файлы в вышепоказанный формат для корректного обучения модели.
+
 *Изначальный формат:*
+
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/1fc8aa51-63f4-4ccf-8f1e-922cca0037b1)
+
+
 *Формат после обработки нашим скриптом:*
+
 ![image](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/9a9a8311-f728-4331-918a-5fa4e755725f)
+
 
 После этого нами была успешно обучена модель на **15 эпохах** с настройками, [представленными](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/train/args.yaml) в `second_stage/train/args.yaml`.
 
