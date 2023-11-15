@@ -12,7 +12,8 @@
 
 Также было выявлено отсутствие аннотаций для циклонов 0-го и 2-го класса, в связи чего наша модель распознаёт классы циклонов, кроме двух вышеперечисленных.
 
-<img src="https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/img/labels.jpg" width="480" height="480"><img src="https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/04f6d935-94aa-45a7-8b41-21fa6459787c")>
+<img src="https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/blob/main/second_stage/img/labels.jpg" width="480" height="480">
+<img src="https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/assets/104260621/04f6d935-94aa-45a7-8b41-21fa6459787c">
 
 
 
