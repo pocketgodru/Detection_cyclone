@@ -1,6 +1,9 @@
 import os
+
+# Ширина и высота изображения для вычисления новых координат
 width_photo, height_photo = 2101, 2101
 
+# Функция для обработки и перезаписи файлов с новыми значениями координат
 def rename_values_in_files(folder_path):
     # Получаем список файлов в папке
     files = os.listdir(folder_path)
@@ -38,7 +41,8 @@ def rename_values_in_files(folder_path):
         # Перезаписываем файл
         with open(file_path, 'w') as file:
             file.writelines(all_lines)
-            
+
+# Функция для переименования файлов, добавляя суффикс "_pro"
 def rename_files(folder_path):
     # Получаем список файлов в папке
     files = os.listdir(folder_path)
@@ -57,6 +61,7 @@ def rename_files(folder_path):
         # Переименовываем файл
         os.rename(old_path, new_path)
 
+# Функция для удаления префикса "Class_" из каждой строки в текстовых файлах
 def rename_class_in_files(folder_path):
     # Получаем список файлов в папке
     files = os.listdir(folder_path)
@@ -77,17 +82,9 @@ def rename_class_in_files(folder_path):
             with open(file_path, 'w') as file:
                 file.writelines(new_lines)
 
-#mt202211111200_ir1.txt
 if __name__ == "__main__":
-    #folder_path = 'A:/TC-Satellite-DataSet/labels'
-
-    #rename_class_in_files(folder_path)
-    #rename_files(folder_path)
-    #rename_values_in_files(folder_path)
-
-    folder_path = 'A:/TC-Satellite-DataSet/TC_by_Classes_txt_2'
+    folder_path = ''  # Замените на путь к вашей папке
 
     rename_class_in_files(folder_path)
     rename_files(folder_path)
     rename_values_in_files(folder_path)
-
