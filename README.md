@@ -301,7 +301,7 @@
 
 </details>
 <details><summary>Второй этап</summary>
-Решение для второго отборочного тура представлено в папке [second_stage]([url](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage)) этого репозитория.
+Решение для второго отборочного тура представлено в папке [second_stage](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage) этого репозитория.
 </details>
 
 ## 📲 Телеграмм бот 
