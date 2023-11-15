@@ -289,9 +289,7 @@
 	  segment.py
 	```
 
-
 	> В строке `results = model("")` в кавычках напишите путь к вашему изображению
-
 
 3. Запустите  файл.
 
@@ -299,10 +297,6 @@
 	```bash
 	  result.jpg
 	```
-
-</details>
-
-<details><summary>Второй этап(доп. задание)</summary>
 
 </details>
 
