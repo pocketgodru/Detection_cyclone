@@ -1,6 +1,8 @@
 from PIL import Image
 import os
+from tqdm import tqdm
 import argparse
+import shutil
 from ultralytics import YOLO
 
 def main():
@@ -17,7 +19,11 @@ def main():
 
     # Путь для сохранения результатов
     save_path = '../../results'
-
+    # Если такая папка существует мы её удаляем и создаём новую
+    try:
+        shutil.rmtree('results')
+    except:
+        pass
     # Запуск модели YOLO на изображениях и сохранение результатов
     results = model(image_path, save_txt=True, name=f'{save_path}', stream=True)
 
@@ -29,7 +35,7 @@ def main():
         files_label = os.listdir(folder_path_label)
         files_images = os.listdir(folder_path_image)
 
-        for file_name_label in files_label:
+        for file_name_label in tqdm(files_label, desc="Обработка аннотаций"):
             all_lines = list()
             if file_name_label.endswith('.txt'):
                 for file_name_images in files_images:
@@ -59,6 +65,7 @@ def main():
                             new_lines.append(height)
                             new_line = f'{class_cyc} {x} {y} {width} {height}\n'
                             all_lines.append(new_line)
+
             # Перезаписываем файл
             with open(file_path_lb, 'w') as file:
                 file.writelines(all_lines)
