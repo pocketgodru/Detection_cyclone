@@ -12,7 +12,7 @@ def main():
     args = parser.parse_args()
 
     # Загрузка модели YOLO с предварительно обученными весами
-    model = YOLO('best.onnx', task='detect')
+    model = YOLO('A:/TC-Satellite-DataSet/dataset/runs/detect/train26/weights/best.onnx', task='detect')
 
     # Путь к директории с тестовыми изображениями
     image_path = args.image_folder 
@@ -22,15 +22,16 @@ def main():
     # Если такая папка существует мы её удаляем и создаём новую
     try:
         shutil.rmtree('results')
+        print('Была удалена уже существующяя папка "results"')
     except:
         pass
     # Запуск модели YOLO на изображениях и сохранение результатов
-    results = model(image_path, save_txt=True, name=f'{save_path}', stream=True)
+    results = model(image_path, save_txt=True, name=f'{save_path}', stream=True, iou=0.5)
 
-    # Путь к директории с сохранёнными файлами меток (label)
+    # Путь к директории с сохранёнными файлами меток (labels)
     folder_path_label = 'results/labels'
 
-    # Функция для переименования значений в файлах меток на основе размеров соответствующих изображений в пикселях
+    # Функция для перерасчёта значений в файлах меток на основе размеров соответствующих изображений в пикселях
     def rename_values_in_files(folder_path_label, folder_path_image):
         files_label = os.listdir(folder_path_label)
         files_images = os.listdir(folder_path_image)
@@ -50,22 +51,16 @@ def main():
 
                         for i in range(len(lines)):
                             lines_res = lines[i].split(' ')
-                            class_cyc = f'Class_{lines_res[0]}'
-                            
+                            #class_cyc = f'Class_{lines_res[0]}'
                             x = int(width * float(lines_res[1]))
                             y = int(height * float(lines_res[2]))
-                            width = int(width * float(lines_res[3]))
-                            height = int(height * float(lines_res[4]))
-
-                            new_lines = list()
-                            new_lines.append(class_cyc)
-                            new_lines.append(x)
-                            new_lines.append(y)
-                            new_lines.append(width)
-                            new_lines.append(height)
-                            new_line = f'{class_cyc} {x} {y} {width} {height}\n'
+                            width_box = int(width * float(lines_res[3]))
+                            height_box = int(height * float(lines_res[4]))
+                            #new_line = f'{class_cyc} {x} {y} {width} {height}\n'
+                            new_line = f'{x} {y} {width_box} {height_box}'
+                            prob ='\n'
                             all_lines.append(new_line)
-
+                            all_lines.append(prob)
             # Перезаписываем файл
             with open(file_path_lb, 'w') as file:
                 file.writelines(all_lines)
@@ -74,7 +69,7 @@ def main():
     for _ in results:
         pass
 
-    # Переименование значений в файлах меток на основе размеров соответствующих изображений
+    #Перерасчёт значений в файлах меток на основе размеров соответствующих изображений
     rename_values_in_files(folder_path_label=folder_path_label, folder_path_image=image_path)
 
 if __name__ == "__main__":
