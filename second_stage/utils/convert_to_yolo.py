@@ -36,7 +36,8 @@ def rename_values_in_files(folder_path):
                 width = f'{width:.6}'
                 height = f'{height:.6}'
 
-                new_line = f'{class_cyc} {x} {y} {width} {height}\n'
+                #new_line = f'{class_cyc} {x} {y} {width} {height}\n' с несколькоми классами
+                new_line = f'{0} {x} {y} {width} {height}\n' # для одного класса
                 all_lines.append(new_line)
         # Перезаписываем файл
         with open(file_path, 'w') as file:
