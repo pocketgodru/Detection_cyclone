@@ -12,7 +12,7 @@ def main():
     args = parser.parse_args()
 
     # Загрузка модели YOLO с предварительно обученными весами
-    model = YOLO('A:/TC-Satellite-DataSet/dataset/runs/detect/train26/weights/best.onnx', task='detect')
+    model = YOLO('best.onnx', task='detect')
 
     # Путь к директории с тестовыми изображениями
     image_path = args.image_folder 
