@@ -1,1 +1,5 @@
-cfv
+Pillow
+tqdm
+argparse
+import shutil
+from ultralytics import YOLO
