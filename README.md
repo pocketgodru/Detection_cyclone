@@ -463,7 +463,7 @@ python solution.py путь_к_папке_с_изображениями
 
 <details><summary>Второй этап</summary>
 
-Решение для второго отборочного тура представлено в папке [second_stage](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage) этого репозитория.
+Второй этап работы над проектом представлен в папке [second_stage](https://github.com/pocketgodru/SiriusAI_detection_tropical_cyclone/tree/main/second_stage) этого репозитория.
 
 </details>
 
